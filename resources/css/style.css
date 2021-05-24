@@ -5,6 +5,8 @@ html {
   font-size: 16px;
 }
 
+
+
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
@@ -41,6 +43,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 1;
 }
 
 header .content {
@@ -115,8 +118,9 @@ header .mobile {
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   height: 43.5rem;
+  background-image: url('../images/banner-landingpage.jpg');
 }
 
 #sign-up-cta {
@@ -124,6 +128,8 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  margin-left: 6.25rem;
 }
 
 #sign-up-cta .content {
@@ -216,17 +222,21 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-.feature {
+.feature{
   flex: 1;
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
 }
 
-.feature .image-container {
+.feature .image-container img{
   width: 90%;
   height: 65%;
   margin: 0 auto;
+}
+
+.feature .content{
+  padding: 2.5rem 0;
 }
 
 .feature h2 {
@@ -294,11 +304,21 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
 
+.image-container img{
+  display: block;
+  max-width: 100%;
+}
+
+
 @media only screen and (max-width: 760px) {
+
+  
+
   #filters-section {
     padding: 1.5rem 0 0 0;
   }
@@ -334,13 +354,13 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content.center {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: 'Palatino', serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
@@ -378,11 +398,16 @@ footer {
 footer .content {
   color: white;
   display: flex;
+  
+}
+
+footer .copyright  {
+  flex-grow: 1;
   font-size: .75rem;
 }
 
-footer .copyright {
-  flex-grow: 1;
+footer .location{
+  font-size: .75rem;
 }
 
 @media only screen and (min-width: 760px) {
